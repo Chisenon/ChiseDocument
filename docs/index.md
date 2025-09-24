@@ -4,22 +4,23 @@ layout: home
 
 hero:
   name: "ChiseNote"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "Tools and Apps"
+  tagline: VRC用に作製したツールのドキュメントなど
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: VCCに追加
+      link: vcc://vpm/addRepo?url=https://chisenon.github.io/chisenote_vpm/index.json
+    
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 使い方を見る
+      link: /ja_JP/install
 
 features:
   - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: aaaaa
   - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: bbbbb
   - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: ccccc
 ---
 
