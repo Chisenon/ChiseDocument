@@ -4,39 +4,91 @@
 
 ## 機能概要
 
-**Decal Texture**は、`_FloatHeartRateC`から取得した心拍数値に応じて、指定されたテクスチャを表示・制御する機能です。ハートマークや抽象的なデザインなど、数値以外の視覚的な方法で心拍数を表現できます。デカール処理で描画しているため、既存のテクスチャの上にテクスチャを重ね合わせて表示します。
+**Decal Texture**は、`Heart Rate (OSC)`から取得した心拍数値に応じて、指定されたテクスチャを表示・制御する機能です。ハートマークや抽象的なデザインなど、数値以外の視覚的な方法で心拍数を表現できます。デカール処理で描画しているため、既存のテクスチャの上にテクスチャを重ね合わせて表示します。
 
 ## 簡単なセットアップ手順
 
-```shell
-┌  シェーダーの設定
-│  # マテリアルのShaderを「ChiseNote/DecalHeartRate」に変更
-│
-◇  機能の有効化
-│  # Texture Decal チェックボックスを On に設定
-│
-◇  デカールテクスチャの設定
-│  # Decal Texture に任意のテクスチャを設定
-│
-◇  テクスチャカラーの調整
-│  # 必要あれば色を変更（デフォルト: 白）
-│
-◇  ブレンドモードの選択
-│  # Blend Mode を Normal または Multiply に設定
-│
-◇  表示位置の調整
-│  # Transform の Position X / Y で位置を調整
-│
-◇  サイズの調整
-│  # Transform の Scale X / Y でサイズを調整
-│
-◇  回転の調整
-│  # Transform の Rotation Angle で回転を調整（0° ～ 360°）
-│
-◇  心拍連動効果の設定
-│  # Emission や Heart Rate Scale で動的効果を設定
-│
-```
+<div class="timeline">
+
+<div class="timeline_part">
+<div class="timeline_label">STEP 1</div>
+<div class="timeline_title">シェーダーの設定</div>
+<div class="timeline_text">
+
+マテリアルのShaderを「ChiseNote/DecalHeartRate/lilToon」に変更します
+
+1. Unity Inspectorでマテリアルを選択
+2. Shader欄を`ChiseNote/DecalHeartRate/lilToon`に設定
+3. カスタムインスペクターが表示されることを確認
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 2</div>
+<div class="timeline_title">機能の有効化</div>
+<div class="timeline_text">
+
+Texture Decal機能を有効にします
+
+1. `Texture Decal`チェックボックスを**On**に設定
+2. Decal Texture関連の設定項目が表示されることを確認
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 3</div>
+<div class="timeline_title">デカールテクスチャの設定</div>
+<div class="timeline_text">
+
+心拍数表示用のテクスチャを設定します
+
+1. `Decal Texture`に任意のテクスチャを設定（ハートマーク等）
+2. `Color`で色調整（必要に応じて）
+3. `Blend Mode`を**Normal**または**Multiply**に設定
+
+::: tip テクスチャ選択のコツ
+ハートマークや抽象的なデザインなど、心拍数を視覚的に表現できるテクスチャがおすすめです。
+:::
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 4</div>
+<div class="timeline_title">表示位置とサイズの調整</div>
+<div class="timeline_text">
+
+テクスチャの表示位置とサイズを調整します
+
+1. **Position X/Y**： 表示位置を調整（-1.0 ～ 1.0）
+2. **Scale X/Y**： サイズを調整（0.0 ～ 2.0）
+3. **Rotation Angle**： 回転角度を設定（-180° ～ 180°）
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 5</div>
+<div class="timeline_title">心拍連動効果の設定</div>
+<div class="timeline_text">
+
+動的な効果を追加します（オプション）
+
+1. **Heart Rate Emission**： エミッションを心拍数に連動させる
+2. **Heart Rate Scale**： スケールを心拍数に連動させる（脈動効果）
+3. 強度設定でMin/Max値を調整
+
+::: info 心拍連動効果
+- **エミッション**： 心拍数が高いほどテクスチャが明るく光ります
+- **スケール**： 心拍数に応じてテクスチャが脈動するように変化します
+:::
+
+</div>
+</div>
+
+</div>
 
 ## 基本設定
 
@@ -47,7 +99,7 @@
 | Texture Decal | テクスチャ表示の有効/無効 | On/Off | `_ActiveDecalTexture` |
 | Decal Texture | デカール用のカスタムテクスチャ | Texture | `_DecalTexture` |
 | Color | テクスチャの色調整 | HDRカラー | `_DecalTextureColor` |
-| Blend Mode | ブレンドモードの選択 | Normal(0) / Multiply(3) | `_DecalTextureBlendMode` |
+| Blend Mode | ブレンドモードの選択 | Normal / Multiply | `_DecalTextureBlendMode` |
 
 ### 位置・スケール設定 (Inspector表示と対応パラメータ)
 

@@ -4,41 +4,91 @@
 
 ## 機能概要
 
-**Decal Number**は、`Heart Rate (OSC)`で取得した数値を、専用の数値テクスチャ（NumberTexture.png）を使用してアバターに表示する機能です。
+**Decal Number**は、`Heart Rate (OSC)`で取得した数値を、専用の数値テクスチャ（`NumberTexture.png`）を使用してアバターに表示する機能です。
 デカール処理で描画しているため、既存のテクスチャの上に数値を重ね合わせて表示します。
 
 ## 簡単なセットアップ手順
 
-```shell
-┌  シェーダーの設定
-│  # マテリアルのShaderを「ChiseNote/DecalHeartRate」に変更
-│
-◇  機能の有効化
-│  # Number Decal チェックボックスを On に設定
-│
-◇  数値テクスチャの設定
-│  # NumberTexture に Texture を設定
-│
-◇  テクスチャカラーの調整
-│  # 必要あれば色を変更（デフォルト: 白）
-│
-◇  ブレンドモードの選択
-│  # Blend Mode を Normal または Multiply に設定
-│
-◇  表示位置の調整
-│  # Transform の PositionX / Y で位置を調整
-│
-◇  サイズの調整
-│  # Transform の ScaleX / Y でサイズを調整
-│
-◇  回転の調整
-│  # Transform の Rotation で回転を調整（-180° ～ 180°）
-│
-◇  表示桁数の設定
-│  # Display の Display Length で表示したい桁数を設定（1-6桁）
-│
+<div class="timeline">
 
-```
+<div class="timeline_part">
+<div class="timeline_label">STEP 1</div>
+<div class="timeline_title">シェーダーの設定</div>
+<div class="timeline_text">
+
+マテリアルのShaderを「ChiseNote/DecalHeartRate/lilToon」に変更します
+
+1. Unity Inspectorでマテリアルを選択
+2. Shader欄を`ChiseNote/DecalHeartRate/lilToon`に設定
+3. カスタムインスペクターが表示されることを確認
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 2</div>
+<div class="timeline_title">機能の有効化</div>
+<div class="timeline_text">
+
+Number Decal機能を有効にします
+
+1. `Number Decal`チェックボックスを**On**に設定
+2. Decal Number関連の設定項目が表示されることを確認
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 3</div>
+<div class="timeline_title">数値テクスチャの設定</div>
+<div class="timeline_text">
+
+数値表示用のテクスチャを設定します
+
+1. `NumberTexture`フィールドにテクスチャを設定
+2. または「Set Sample Texture」ボタンでサンプルを自動割り当て
+3. `Blend Mode`を**Normal**または**Multiply**に設定
+
+::: tip テクスチャがない場合
+「Spawn Texture Generator」ボタンでFont2Textureツール（`Font2Tex.prefab`）をHierarchyに生成し、カスタムフォントから数値テクスチャを生成できます。
+:::
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 4</div>
+<div class="timeline_title">表示位置とサイズの調整</div>
+<div class="timeline_text">
+
+数値の表示位置とサイズを調整します
+
+1. **Position X/Y**： 表示位置を調整（-1.0 ～ 1.0）
+2. **Scale X/Y**： サイズを調整（0.0 ～ 2.0）
+3. **Rotation**： 回転角度を設定（-180° ～ 180°）
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 5</div>
+<div class="timeline_title">表示形式の設定</div>
+<div class="timeline_text">
+
+数値の表示形式を設定します
+
+1. **Display Length**： 表示桁数を設定（1-6桁）
+2. **Alignment**： 整列方法を選択（ZERO FILL / SHIFT RIGHT / SHIFT LEFT）
+3. **Digit Spacing**： 桁間の間隔を調整（0.1 ～ 2.0）
+
+::: info エミッション設定
+必要に応じて`Heart Rate Emission`を有効にすると、心拍数に応じてエミッションの強度が変化します。
+:::
+
+</div>
+</div>
+
+</div>
 
 
 ## 基本設定
@@ -60,7 +110,7 @@
 
 ---
 
-::: tip 拡張機能の使い方
+::: info 拡張機能の使い方
 - 「Set Sample Texture」ボタンで素早くサンプルを割り当てられます。
 見つからない場合は手動で `NumberTexture` を指定してください。
 - 「Spawn Texture Generator」はフォントから自動で`NumberTexture`を作るための補助ツールです。
