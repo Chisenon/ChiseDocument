@@ -2,21 +2,89 @@
 
 ## 📦 VPMでのインストール（推奨）
 
-### ALCOM / VCC
+<div class="timeline">
+
+<div class="timeline_part">
+<div class="timeline_label">STEP 1</div>
+<div class="timeline_title">VCC / ALCOMのインストール</div>
+<div class="timeline_text">
+
+VRChat Creator Companion（VCC）またはALCOMをインストールします
+
+- [VRChat Creator Companion](https://vrchat.com/home/download)
+- [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/)
+
+::: tip どちらを選ぶべき？
+- **VRChat Creator Companion**：VRChat公式ツール
+- **ALCOM**：とにかく軽量で使いやすい！(オススメ)
+:::
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 2</div>
+<div class="timeline_title">VPMリポジトリの追加</div>
+<div class="timeline_text">
+
+下のボタンをクリックしてリポジトリを追加します
 
 <a href="vcc://vpm/addRepo?url=https://chisenon.github.io/chisenote_vpm/index.json" style="display: inline-block; background: #42b883; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 8px 0;">🔗 VPMリポジトリを追加</a>
 
-0. [ALCOM](https://vrc-get.anatawa12.com/ja/alcom/) / [VCC](https://vrchat.com/home/download)をインストールしておく
-1. 上のボタンをクリックしてVPMリポジトリを追加
-2. ALCOM / VCCでProjectを開く
-3. `Manage Project`のパッケージ一覧から必要な機能を選択してインストール
+ボタンクリック後、VCC/ALCOMが開きリポジトリが追加されます。
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 3</div>
+<div class="timeline_title">プロジェクトでのインストール</div>
+<div class="timeline_text">
+
+1. VCC/ALCOMでプロジェクトを開く
+2. `Manage Project`をクリック
+3. パッケージ一覧から必要な機能を選択
+4. `Add`ボタンでインストール実行
+
+</div>
+</div>
+
+</div>
 
 ## 📁 UnityPackageでのインストール
 
-1. BOOTHからツールをダウンロード
-2. ダウンロードした`.zip`ファイルなどを展開
-3. `.unitypackage` ファイルをUnityにドラッグ&ドロップしてimport
+<div class="timeline">
 
-::: warning ⚠️
-依存関係の自動管理ができないため、VPMでのインストールを推奨します
+<div class="timeline_part">
+<div class="timeline_label">STEP 1</div>
+<div class="timeline_title">ファイルのダウンロード</div>
+<div class="timeline_text">
+
+BOOTHまたはGitHubから必要なツールをダウンロードします
+
+1. 配布ページにアクセス
+2. `.zip`ファイルをダウンロード
+3. ダウンロードしたファイルを展開
+
+</div>
+</div>
+
+<div class="timeline_part timeline_part_sub">
+<div class="timeline_label">STEP 2</div>
+<div class="timeline_title">Unityへのインポート</div>
+<div class="timeline_text">
+
+1. 展開したフォルダ内の`.unitypackage`ファイルを確認
+2. UnityプロジェクトのProjectウィンドウにドラッグ&ドロップ
+3. Import Unity Packageダイアログで`Import`をクリック
+
+::: warning 依存関係について
+UnityPackageでは依存関係の自動管理ができません。
+
+必要なライブラリが不足している場合は手動で追加してください。
 :::
+
+</div>
+</div>
+
+</div>

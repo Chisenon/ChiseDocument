@@ -16,9 +16,26 @@ export default defineConfig({
         text: 'lilToon-DecalHeartRate',
         collapsed: false,
         items: [
-          { text: 'DHR_Overview', link: '/ja_JP/lildhr/dhr_index' },
+          { text: 'Readme', link: '/ja_JP/lildhr/dhr_index' },
           { text: 'Decal Number', link: '/ja_JP/lildhr/dhr_number' },
           { text: 'Decal Texture', link: '/ja_JP/lildhr/dhr_texture' }
+        ]
+      },
+      {
+        text: 'DHR_Installer',
+        collapsed: false,
+        items:[
+          { text: '概要', link: '/ja_JP/dhri/dhri_index' },
+          { text: '使い方', link: '/ja_JP/dhri/dhri_usage' }
+        ]
+      },
+      {
+        text: 'Font2Texture Generator',
+        collapsed: false,
+        items: [
+          { text: 'Readme', link: '/ja_JP/f2t/f2t_index' },
+          { text: 'セットアップ', link: '/ja_JP/f2t/f2t_setup' },
+          { text: 'Inspector設定', link: '/ja_JP/f2t/f2t_inspector' }
         ]
       },
       
