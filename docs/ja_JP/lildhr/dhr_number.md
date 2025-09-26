@@ -1,10 +1,10 @@
-# Decal Number機能
+# Number Decal 機能
 
-数値テクスチャを使用して心拍数を表示するDecal Number機能の詳細解説
+数値テクスチャを使用して心拍数を表示する Number Decal 機能の詳細解説
 
 ## 機能概要
 
-**Decal Number**は、`Heart Rate (OSC)`で取得した数値を、専用の数値テクスチャ（`NumberTexture.png`）を使用してアバターに表示する機能です。
+**Number Decal** は、`Heart Rate (OSC)` で取得した数値を、専用の数値テクスチャ（`NumberTexture.png`）を使用してアバターに表示する機能です。
 デカール処理で描画しているため、既存のテクスチャの上に数値を重ね合わせて表示します。
 
 ## 簡単なセットアップ手順
@@ -16,11 +16,11 @@
 <div class="timeline_title">シェーダーの設定</div>
 <div class="timeline_text">
 
-マテリアルのShaderを「ChiseNote/DecalHeartRate/lilToon」に変更します
+マテリアルの Shader を「ChiseNote/DecalHeartRate/lilToon」に変更します
 
-1. Unity Inspectorでマテリアルを選択
-2. Shader欄を`ChiseNote/DecalHeartRate/lilToon`に設定
-3. カスタムインスペクターが表示されることを確認
+1. Unity Inspector でマテリアルを選択
+2. Shader 欄を`ChiseNote/DecalHeartRate/lilToon`に設定
+3. カスタム インスペクターが表示されることを確認
 
 </div>
 </div>
@@ -30,10 +30,13 @@
 <div class="timeline_title">機能の有効化</div>
 <div class="timeline_text">
 
-Number Decal機能を有効にします
+Number Decal 機能を有効にします
 
-1. `Number Decal`チェックボックスを**On**に設定
-2. Decal Number関連の設定項目が表示されることを確認
+1. `Number Decal` チェック ボックスを**On**に設定
+2. Number Decal 関連の設定項目が表示されることを確認
+
+![image_dhr2](../../files/images/image_dhr2.png)
+
 
 </div>
 </div>
@@ -45,12 +48,12 @@ Number Decal機能を有効にします
 
 数値表示用のテクスチャを設定します
 
-1. `NumberTexture`フィールドにテクスチャを設定
+1. `NumberTexture` フィールドにテクスチャを設定
 2. または「Set Sample Texture」ボタンでサンプルを自動割り当て
-3. `Blend Mode`を**Normal**または**Multiply**に設定
+3. `Blend Mode` を**Normal**または**Multiply**に設定
 
 ::: tip テクスチャがない場合
-「Spawn Texture Generator」ボタンでFont2Textureツール（`Font2Tex.prefab`）をHierarchyに生成し、カスタムフォントから数値テクスチャを生成できます。
+「Spawn Texture Generator」ボタンで Font2Texture ツール（`Font2Tex.prefab`）を Hierarchy に生成し、カスタム フォントから数値テクスチャを生成できます。
 :::
 
 </div>
@@ -95,7 +98,7 @@ Number Decal機能を有効にします
 
 ### メイン設定
 
-| Inspector表示 | 説明 | 設定範囲 | Parameter |
+| Inspector 表示 | 説明 | 設定範囲 | Parameter |
 |---------------|------|----------|-----------------|
 | Number Decal | 数値表示の有効/無効 | On/Off | `_ActiveDecalNumber` |
 | Number Texture | 数値用テクスチャ | Texture | `_SpriteNumberTexture` |
@@ -103,7 +106,7 @@ Number Decal機能を有効にします
 
 ### 拡張機能の呼び出し
 
-| Inspector表示 | 説明 | 設定/挙動 | Parameter |
+| Inspector 表示 | 説明 | 設定/挙動 | Parameter |
 |---------------|------|----------|----------|
 | Set Sample Texture (Button) | NumberTextureをマテリアルに自動で割り当てます。サンプルが見つからない場合はボタンが無効化されます。 | ボタン操作（クリックで割当） |  |
 | Spawn Texture Generator (Button) | `Font2Tex` プレハブをHierarchyに生成して、任意のフォントから数値テクスチャを作成する補助ツールを追加します。 | ボタン操作（HierarchyにPrefab追加または既存選択） |  |
@@ -119,7 +122,7 @@ Number Decal機能を有効にします
 
 ### 位置・スケール設定
 
-| Inspector表示 | 説明 | 設定範囲 | Parameter |
+| Inspector 表示 | 説明 | 設定範囲 | Parameter |
 |---------------|------|----------|-----------------|
 | Position X / Position Y  | 表示位置のX/Yをスライダーで調整 | -1.0 ～ 1.0 | `_TexPositionXVector` / `_TexPositionYVector` |
 | Sync Scale X/Y & Scale X / Scale Y  | スケールを同期する or 個別に調整 | 0.0 ～ 2.0 | `_SyncDecalNumberTextureScale` / `_TexScaleXVector` / `_TexScaleYVector` |
@@ -129,7 +132,7 @@ Number Decal機能を有効にします
 
 ### 数値表示設定
 
-| Inspector表示 | 説明 | 設定値 | Parameter |
+| Inspector 表示 | 説明 | 設定値 | Parameter |
 |---------------|------|--------|-----------------|
 | Display Length | 表示桁数を指定 | 1 ～ 6桁 | `_NumTexDisplaylength` |
 | Alignment | 整列方法を選択 | ZERO FILL / SHIFT RIGHT / SHIFT LEFT | `_NumTexAlignment` |
@@ -138,14 +141,14 @@ Number Decal機能を有効にします
 
 ## エミッション設定
 
-| Inspector表示 | 説明 | 設定範囲 | Parameter |
+| Inspector 表示 | 説明 | 設定範囲 | Parameter |
 |---------------|------|----------|-----------------|
 | Color / Mask (Texture + Color) | エミッション用のマスクと色を設定 | Texture / Color | `_DecalNumberEmissionMask` / `_DecalNumberEmissionColor` |
 | Basic Emission Power | Defaultのエミッション強度 | 0 ～ 100 | `_DecalNumberEmissionStrength` |
 
 ## 心拍連動エミッション
 
-| Inspector表示 | 説明 | 設定範囲 | Parameter |
+| Inspector 表示 | 説明 | 設定範囲 | Parameter |
 |---------------|------|----------|-----------------|
 | Heart Rate Emission | 心拍連動エミッションを有効化 | On/Off | `_UseHeartRateEmission` |
 | Min Intensity / Max Intensity | 心拍連動時の最小・最大エミッション強度 | 0 ～ 100 | `_HeartRateEmissionMin` / `_HeartRateEmissionMax` |
