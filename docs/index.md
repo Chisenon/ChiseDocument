@@ -15,12 +15,4 @@ hero:
       text: 使い方を見る
       link: /ja_JP/install
 
-features:
-  - title: Feature A
-    details: aaaaa
-  - title: Feature B
-    details: bbbbb
-  - title: Feature C
-    details: ccccc
 ---
-
