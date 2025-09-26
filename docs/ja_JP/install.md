@@ -31,7 +31,7 @@ VRChat Creator Companion（VCC）またはALCOMをインストールします
 
 <a href="vcc://vpm/addRepo?url=https://chisenon.github.io/chisenote_vpm/index.json" style="display: inline-block; background: #42b883; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 8px 0;">🔗 VPMリポジトリを追加</a>
 
-ボタンクリック後、VCC/ALCOMが開きリポジトリが追加されます。
+ボタンをクリックすると、VCC/ALCOM が開き、リポジトリが追加されます。
 
 </div>
 </div>
@@ -41,17 +41,17 @@ VRChat Creator Companion（VCC）またはALCOMをインストールします
 <div class="timeline_title">プロジェクトでのインストール</div>
 <div class="timeline_text">
 
-1. VCC/ALCOMでプロジェクトを開く
-2. `Manage Project`をクリック
+1. VCC/ALCOM でプロジェクトを開く
+2. `Manage Project` をクリック
 3. パッケージ一覧から必要な機能を選択
-4. `Add`ボタンでインストール実行
+4. `Add` ボタンでインストール実行
 
 </div>
 </div>
 
 </div>
 
-## 📁 UnityPackageでのインストール
+## 📁 Unity Package でのインストール
 
 <div class="timeline">
 
@@ -60,26 +60,26 @@ VRChat Creator Companion（VCC）またはALCOMをインストールします
 <div class="timeline_title">ファイルのダウンロード</div>
 <div class="timeline_text">
 
-BOOTHまたはGitHubから必要なツールをダウンロードします
+BOOTHからツールをダウンロードします
 
-1. 配布ページにアクセス
-2. `.zip`ファイルをダウンロード
-3. ダウンロードしたファイルを展開
+1. [ショップページ](https://chisenote.booth.pm/)にアクセス
+2. `.zip` ファイルをダウンロード
+3. ダウンロードした ZIP ファイルを展開してください
 
 </div>
 </div>
 
 <div class="timeline_part timeline_part_sub">
 <div class="timeline_label">STEP 2</div>
-<div class="timeline_title">Unityへのインポート</div>
+<div class="timeline_title">Unity へのインポート</div>
 <div class="timeline_text">
 
-1. 展開したフォルダ内の`.unitypackage`ファイルを確認
-2. UnityプロジェクトのProjectウィンドウにドラッグ&ドロップ
-3. Import Unity Packageダイアログで`Import`をクリック
+1. 展開したフォルダ内の `.unitypackage` ファイルを確認
+2. Unity プロジェクトの Project ウィンドウにドラッグ&ドロップ
+3. Import Unity Package ダイアログで `Import` をクリック
 
 ::: warning 依存関係について
-UnityPackageでは依存関係の自動管理ができません。
+Unity Package 形式では依存関係が自動でインストールされません。
 
 必要なライブラリが不足している場合は手動で追加してください。
 :::
