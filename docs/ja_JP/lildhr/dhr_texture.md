@@ -117,7 +117,14 @@ Texture Decal 機能を有効にします
 |---------------|------|----------|----------|
 | Color / Mask (Texture + Color) | エミッション用のマスクと色を設定 | Texture / Color | `_DecalTextureEmissionMask` / `_DecalTextureEmissionColor` |
 | Basic Emission Power | ベーシックなエミッション強度 | 0 ～ 100 | `_DecalTextureEmissionStrength` |
+| Main Color Power | エミッション色とテクスチャ色のブレンド比率 | 0.0 ～ 1.0 | `_DecalTextureMainColorPower` |
 
+::: tip Main Color Power について
+**Main Color Power** は、エミッション色（Emission Color）とデカールテクスチャの色（Decal Texture Color）をブレンドする比率を調整する機能です。
+- **0.0**: エミッション色のみを使用
+- **0.5**: エミッション色とテクスチャ色を50%ずつブレンド
+- **1.0**: デカールテクスチャの色のみを使用  
+:::
 
 ## 心拍連動エミッション
 | Inspector 表示 | 説明 | 設定範囲 | Parameter |

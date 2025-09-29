@@ -144,7 +144,17 @@ Number Decal 機能を有効にします
 | Inspector 表示 | 説明 | 設定範囲 | Parameter |
 |---------------|------|----------|-----------------|
 | Color / Mask (Texture + Color) | エミッション用のマスクと色を設定 | Texture / Color | `_DecalNumberEmissionMask` / `_DecalNumberEmissionColor` |
-| Basic Emission Power | Defaultのエミッション強度 | 0 ～ 100 | `_DecalNumberEmissionStrength` |
+| Basic Emission Power | Default のエミッション強度 | 0 ～ 100 | `_DecalNumberEmissionStrength` |
+| Main Color Power | エミッション色とテクスチャ色のブレンド比率 | 0.0 ～ 1.0 | `_DecalNumberMainColorPower` |
+
+::: tip Main Color Power について
+**Main Color Power** は、エミッション色（Emission Color）と数値テクスチャの色（Number Texture Color）をブレンドする比率を調整する機能です。
+
+- **0.0**: エミッション色のみを使用
+- **0.5**: エミッション色とテクスチャ色を50%ずつブレンド
+- **1.0**: 数値テクスチャの色のみを使用  
+
+:::
 
 ## 心拍連動エミッション
 
