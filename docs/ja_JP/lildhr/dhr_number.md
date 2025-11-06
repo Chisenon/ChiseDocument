@@ -120,6 +120,16 @@ Number Decal 機能を有効にします
 すでに存在する場合はそれを選択します。
 :::
 
+### 表示設定
+
+| Inspector 表示 | 説明 | 設定値 | Parameter |
+|---------------|------|--------|-----------------|
+| Visibility Mode | 心拍数が0のときの表示制御 | Always Show (常に表示) / Hide Below Zero (0のときだけ非表示) | `_HideDecalNumberWhenZero` |
+
+::: tip Visibility Mode について
+**Visibility Mode** を`Hide Below Zero`に設定すると、心拍数が0の場合に数値表示が自動的に非表示になります。心拍数センサーが接続されていない状態やアイドル時に「0」が表示されるのを防ぐことができます！
+:::
+
 ### 位置・スケール設定
 
 | Inspector 表示 | 説明 | 設定範囲 | Parameter |
