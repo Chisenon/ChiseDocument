@@ -22,6 +22,7 @@ DHR Installer を使用する前に、以下のパッケージがインストー
 - [BluetoothHeartRateOSC](https://github.com/AkaiMage/BluetoothHeartRateOSC)
 - [HRtoVRChat_OSC](https://github.com/200Tigersbloxed/HRtoVRChat_OSC)
 - [VrcOscMibandHrm](https://github.com/vard88508/vrc-osc-miband-hrm)
+- [VRCOSC](https://github.com/VolcanicArts/VRCOSC)
 
 </div>
 </div>
@@ -65,6 +66,7 @@ Prefab のスクリプト上部にアバターが自動で検出・表示され�
 - **BluetoothHeartRateOSC** (`HeartRateBPM`)
 - **HRtoVRChat_OSC** (`HeartRateBPM`)
 - **VrcOscMibandHrm** (`MiBandHR`)
+- **VRCOSC** (`VRCOSC/Heartrate/Value`)
 - **Other** (カスタム設定)
 
 ![image_dhri4](../../files/images/image_dhri4.png)
