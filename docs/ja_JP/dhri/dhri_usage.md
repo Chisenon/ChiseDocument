@@ -64,8 +64,8 @@ Prefab のスクリプト上部にアバターが自動で検出・表示され�
 
 **OSC Software Type** から選択
 - **BluetoothHeartRateOSC** (`HeartRateBPM`)
-- **HRtoVRChat_OSC** (`HeartRateBPM`)
-- **VrcOscMibandHrm** (`MiBandHR`)
+- **HRtoVRChat_OSC** (`HR`)
+- **VrcOscMibandHrm** (`Heartrate3`)
 - **VRCOSC** (`VRCOSC/Heartrate/Value`)
 - **Other** (カスタム設定)
 
