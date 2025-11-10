@@ -1,8 +1,6 @@
 # ChiseNote - Document
 
-「ChiseNote」のドキュメントサイト
-
-## ドキュメントサイト
+## ドキュメントURL
 
 # https://chisenon.github.io/ChiseDocument/
 
@@ -76,5 +74,3 @@ docs/
 ## リンク
 
 - VPMリポジトリ： https://chisenon.github.io/chisenote_vpm/
-- GitHub Organization： https://github.com/Chisenon
-
