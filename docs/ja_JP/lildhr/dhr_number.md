@@ -156,6 +156,7 @@ Number Decal 機能を有効にします
 | Color / Mask (Texture + Color) | エミッション用のマスクと色を設定 | Texture / Color | `_DecalNumberEmissionMask` / `_DecalNumberEmissionColor` |
 | Basic Emission Power | Default のエミッション強度 | 0 ～ 100 | `_DecalNumberEmissionStrength` |
 | Main Color Power | エミッション色とテクスチャ色のブレンド比率 | 0.0 ～ 1.0 | `_DecalNumberMainColorPower` |
+| Emission Pattern | エミッション強度の変化パターン | Default / Smooth | `_DecalNumberEmissionPattern` |
 
 ::: tip Main Color Power について
 **Main Color Power** は、エミッション色（Emission Color）と数値テクスチャの色（Number Texture Color）をブレンドする比率を調整する機能です。
@@ -164,6 +165,13 @@ Number Decal 機能を有効にします
 - **0.5**: エミッション色とテクスチャ色を50%ずつブレンド
 - **1.0**: 数値テクスチャの色のみを使用  
 
+:::
+
+::: tip Emission Pattern について
+**Emission Pattern** は、心拍連動エミッション（Heart Rate Emission）を有効にした際のエミッション強度の変化パターンを制御します。
+
+- **Default**: 心拍数値に比例した線形的な変化
+- **Smooth**: 滑らかで自然な強度変化
 :::
 
 ## 心拍連動エミッション
